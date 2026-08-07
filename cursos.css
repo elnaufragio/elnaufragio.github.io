@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(-45deg, #03346f, #3160a7, #1b274a); 
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    color: #ffffff;
+}
+
+@keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+.container {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: 1px; /* Espacio entre las letras */
+    align-items: center;
+    margin-bottom: 70px;
+    margin-top: -20px; /* Añade esta línea para ajustar la distancia superior #2D313D*/
+    font-family: 'Maven Pro', sans-serif; /* Aplica Maven Pro al cuerpo */
+}
+
+
+header h1 a{
+    color: #ffffff;
+    margin: 0;
+    text-decoration: none;
+    font-size: 22px;
+    transition: color 0.3s; /* Transición para el color del texto */
+    font-weight: normal;
+    margin-left: 5px;
+
+}
+
+header h1 a:hover {
+    color: #fcffdf; /* Cambia el color al pasar el cursor */
+}
+
+nav a {
+    color: #BDE3FF;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+    transition: color 0.3s; /* Transición para el color del texto */
+}
+
+nav a.active {
+    color: #ffd700;
+}
+
+header nav a:hover {
+    color: #fcffdf; /* Cambia el color al pasar el cursor */
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);  /* cuantos cuadrados hay en una fila: 5 */
+    gap: 22.5px;
+}
+
+.course-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #3c3f51;
+    border: none;
+    padding: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    width: 190px;  /* Añade esta línea para establecer un ancho fijo */
+    height: 120px; /* Añade esta línea para establecer un alto fijo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra exterior ligera */
+    position: relative;
+}
+
+.course-button:hover {
+    background-color: #50536a;
+}
+
+.course-button .icon {
+    width: 10px; /* Ajusta el tamaño del SVG a 10x10 píxeles */
+    height: 10px; /* Ajusta el tamaño del SVG a 10x10 píxeles */
+    margin-top: -5px; /* Mueve el ícono 5px hacia arriba */
+    display: block; /* Asegura que el SVG se comporte como un bloque */
+    box-sizing: content-box; /* Asegura que padding y border no afecten el tamaño del SVG */
+    padding: 0; /* Asegura que no haya padding extra */
+    margin: 0; /* Asegura que no haya márgenes extra */
+}
+
+.course-button img {
+    width: 250px;  /* Ajusta este valor para hacer el SVG más pequeño */
+    height: 170px; /* Ajusta este valor para hacer el SVG más pequeño */
+    margin-bottom: -40px; /* Ajusta el margen inferior para acercar el texto */
+    margin-top: -50px; /* Añade esta línea para mover el SVG hacia arriba */
+}
+
+footer {
+    background-color: #353744;
+    color: #585757;
+    padding: 1px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 12px;
+    text-align: center; /* Añadido para centrar el texto */
+    text-indent: 15px; /* Mueve el texto 15px hacia la derecha */
+    box-sizing: border-box; /* Asegura que el padding no aumente el ancho total */
+    z-index: 9999
+}

@@ -1,0 +1,156 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(-45deg, #094369, #2d505c, #2D313D); 
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: 1px; /* Espacio entre las letras */
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: -20px; /* Añade esta línea para ajustar la distancia superior #2D313D*/
+    font-family: 'Maven Pro', sans-serif; /* Aplica Maven Pro al cuerpo */
+}
+
+
+header h1 a{
+    color: #ffffff;
+    margin: 0;
+    text-decoration: none;
+    font-size: 22px;
+    transition: color 0.3s; /* Transición para el color del texto */
+    font-weight: normal;
+    margin-left: 5px;
+
+}
+
+header h1 a:hover {
+    color: #fcffdf; /* Cambia el color al pasar el cursor */
+}
+
+nav a {
+    color: #BDE3FF;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+    transition: color 0.3s; /* Transición para el color del texto */
+}
+
+nav a.active {
+    color: #ffd700;
+}
+
+header nav a:hover {
+    color: #fcffdf; /* Cambia el color al pasar el cursor */
+}
+
+main {
+    width: 95%;
+    max-width: 1200px;
+    margin: 20px auto; /* Alinea el contenido al centro horizontalmente */
+}
+
+.courses {
+    text-align: center; /* Alinea todo el contenido al centro */
+    background-color: #363A47; /* Fondo amarillo */
+    padding: 15px; /* Espacio interno de 15px alrededor del contenido */
+    border-radius: 10px; /* Borde redondeado de 10px */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra exterior ligera */
+    font-family: 'Roboto Slab', serif; /* Cambia la tipografía a Roboto Slab */
+}
+
+.courses h2 {
+    text-align: left; /* Alinea el título a la izquierda */
+    padding-left: 20px;
+    padding-bottom: 0px; /* Espacio inferior del título */
+    margin-top: 0; /* Elimina el margen superior predeterminado */
+    margin-bottom: 20px; /* Espacio inferior entre el título y los botones */
+    font-size: 18px;
+    letter-spacing: 2px; /* Espacio entre las letras */
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    column-gap: 0px; /* Ajusta la distancia horizontal entre botones */
+    row-gap: 10px; /* Ajusta la distancia vertical entre botones si es necesario */
+    justify-items: center; /* Alinea los elementos al centro dentro de la cuadrícula */
+}
+
+.course-button {
+    display: flex; /* Cambia de inline-block a flex */
+    align-items: center; /* Alinea el contenido al centro verticalmente */
+    justify-content: flex-start; /* Alinea el contenido al inicio horizontalmente */
+    background-color: #404555;
+    color: #f3fcff;
+    text-align: left;
+    padding: 10px 10px 10px 40px;
+    text-decoration: none;
+    border-radius: 10px;
+    position: relative;
+    transition: background-color 0.3s ease;
+    overflow: hidden;
+    width: 80%;
+    max-width: 100%; /* Asegura que no supere el ancho del contenedor grid */
+    height: auto;
+}
+
+.course-button .text {
+    display: inline-block;
+    font-size: 14px;
+    letter-spacing: 0.8px;
+    margin-left: 15px;
+    line-height: normal;
+}
+
+
+
+
+.course-button:hover {
+    background-color: #5d647a;
+    color: #fcffdf
+}
+
+.course-button .number {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(81, 102, 141, 0.2);
+    color: #ffffff;
+    font-size: 18px;
+    width: 40px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    z-index: 1;
+}
+
+
+footer {
+    background-color: #353744;
+    color: #585757;
+    padding: 1px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 12px;
+    text-align: center; /* Añadido para centrar el texto */
+    text-indent: 15px; /* Mueve el texto 15px hacia la derecha */
+    box-sizing: border-box; /* Asegura que el padding no aumente el ancho total */
+    z-index: 9999
+}
